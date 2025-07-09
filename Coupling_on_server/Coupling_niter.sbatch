@@ -9,4 +9,4 @@
 #SBATCH --time=12:00:00 
 #SBATCH --partition=shared-cpu
 
-python BioClim_coupling.py $SLURM_ARRAY_TASK_ID
+python BioClim_coupling_niter.py $SLURM_ARRAY_TASK_ID
