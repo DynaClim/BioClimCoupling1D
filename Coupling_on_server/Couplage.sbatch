@@ -9,8 +9,4 @@
 #SBATCH --time=12:00:00 
 #SBATCH --partition=shared-cpu
 
-# Charger les modules nécessaires (à adapter à ton environnement)
-# module load python/3.10  # Exemple
-
-# Lancer le script Python avec l'identifiant de tâche SLURM
 python BioClim_coupling.py $SLURM_ARRAY_TASK_ID
