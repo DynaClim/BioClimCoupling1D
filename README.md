@@ -16,3 +16,5 @@ Four folders are included in this repository. Each of them contains a `README.md
 - **ciatables**: Contains the CIA tables necessary for the chemical species present in the atmosphere.
 - **Coupling_on_server**: Contains all the code needed to run the coupling on a server, to parallelize it, etc.
 - **Local_coupling_computation**: Contains everything required to run the coupling locally on your own computer.
+- **Bibliography**: Contains the main articles on which this study is based, as well as the M1 internship report by François-Xavier Meyer.
+ 
