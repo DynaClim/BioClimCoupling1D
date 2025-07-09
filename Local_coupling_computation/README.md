@@ -114,4 +114,4 @@ Temperatures are not consistent with 3D models, so a **dry atmosphere** is prefe
 These notebooks show means and standard deviations for simulations with different parameter sets.
 
 ⚠️ **The files used by these notebooks can only becreated on a server**, as it is time consumming to create them.  
-For more details, refer to the [corresponding section](../upling_on_server).
+For more details, refer to the [corresponding section](../Coupling_on_server).
