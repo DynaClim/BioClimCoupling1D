@@ -44,6 +44,7 @@ Time = data['Time']
 lat = data['latitude']
 lon = data['longitude']
 aire = data['aire']
+rnat = data["rnat"]
 
 Mars_surface = float(np.sum(aire))  # Surface of Mars (m²)
 
