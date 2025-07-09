@@ -4,14 +4,11 @@
 import sys
 import os
 import numpy as np
-#import matplotlib as mpl
-#import matplotlib.pyplot as plt
 import pickle
 import time
 from IPython.utils import io
 import xarray as xr
 
-# Imports des modules
 from Main_evolution_function_RK import *
 from EXO_K_wo_ocean import *
 from Constants import *
@@ -26,15 +23,13 @@ import numpy as np
 from scipy.interpolate import LinearNDInterpolator
 
 
-# Charger le fichier CSV
-df = pd.read_csv("Grid_values_ini.csv")  # Adaptez le chemin si besoin
+df = pd.read_csv("Grid_values_ini.csv") 
 
-task_id = int(sys.argv[1]) if len(sys.argv) > 1 else 0  # par défaut 0 si aucun argument
+task_id = int(sys.argv[1]) if len(sys.argv) > 1 else 0 
 
 GEL_list = np.concatenate((10**np.linspace(-2,0,10),np.linspace(2,1000,40)))
 
 
-# Extraire les colonnes d'entrée et de sortie
 points = df[['P', 'T', 'fG']].values
 NCeq = df['NCeq'].values
 cH = df['cH'].values
@@ -42,14 +37,12 @@ cC = df['cC'].values
 cG = df['cG'].values
 cN = df['cN'].values
 
-# Création des interpolateurs
 interp_NCeq = LinearNDInterpolator(points, NCeq)
 interp_cH = LinearNDInterpolator(points, cH)
 interp_cC = LinearNDInterpolator(points, cC)
 interp_cG = LinearNDInterpolator(points, cG)
 interp_cN = LinearNDInterpolator(points, cN)
 
-# Fonction d'interpolation
 def interp_conc(P, T, fG):
     pt = np.array([[P, T, fG]])
     return {
@@ -62,7 +55,6 @@ def interp_conc(P, T, fG):
 
 t_beginning = time.time()
 
-tf = 1e5 #jours
 print("Volume of the ocean :",format(550*Mars_surface,".2e"),"m^3")
 print("Ratio of the ocean over Mars surface :",round(fraction_ocean,4))
 T_surf = 300
@@ -201,8 +193,8 @@ if Teq > 271:
     
 
     filename = f"Lib_Couplage_exok_bio_file_GEL_{GEL}.pkl"
-    path = "Results_couplage_1D\\"
-    with open(filename, 'wb') as f:
+    path = ""
+    with open(path+filename, 'wb') as f:
         pickle.dump(data, f)
 
     print('=========================================================================')
