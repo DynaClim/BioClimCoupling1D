@@ -112,12 +112,15 @@ def defining_atm(h2,ch4,n2,ptop,psurf,t_surf,acceleration=None):
 
     return evol_mars
 
+
+
 # =========================================================================
 # Importing corrk and cia tables
 # =========================================================================
 
-datapath_ktables = '/home/users/m/meyerfra/earlymars_FX/Biomodel_1D/Ktables/'
-datapath_ciatables = '/home/users/m/meyerfra/earlymars_FX/Biomodel_1D/Ciatables/'
+
+datapath_ktables = 'Ktables/'
+datapath_ciatables = 'ciatables/'
 
 xk.Settings().set_search_path(datapath_ktables, path_type='ktable')
 xk.Settings().set_search_path(datapath_ciatables, path_type='cia')
