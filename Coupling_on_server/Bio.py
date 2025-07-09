@@ -2,7 +2,6 @@ import numpy as np
 import time as libtime
 from math import *
 from Constants import *
-from Technical_functions import *
 
 def init_bio(FTnames,FTlist,t_intro_list,T):
 
