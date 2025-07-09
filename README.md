@@ -7,7 +7,7 @@ The initial prebiotic state of Mars is based on a scenario studied by Turbet and
 
 Methanogenic cells are then introduced, and the system is allowed to evolve under the influence of biology. The concentrations of H₂, CH₄, CO₂, and N₂ in the ocean, the concentration of methanogens in the ocean, and the gas ratios in the atmosphere all evolve simultaneously. Once a threshold of CH₄ is reached in the atmosphere, the climate equilibrium is recalculated to stay close to reality, and this process continues. The coupling stops when the model's surface temperature, assumed to be that of the ocean, falls below the ocean’s freezing point. At this point, the ocean is considered frozen and biological activity ceases (see diagram).
 
-![Diagram representing 1D coupling](1D_coupling_diagram.png)
+<img src="./1D_coupling_diagram.png" alt="Diagram representing 1D coupling" width="30%">
 
 ## 2. Description of the Different Folders in This Repository
 Four folders are included in this repository. Each of them contains a `README.md` file that provides more detailed explanations of the different codes and files in the folder.
