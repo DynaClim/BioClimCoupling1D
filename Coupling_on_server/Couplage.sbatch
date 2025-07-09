@@ -13,4 +13,4 @@
 # module load python/3.10  # Exemple
 
 # Lancer le script Python avec l'identifiant de tâche SLURM
-python Couplage_exok_bio_principal_new_RK.py $SLURM_ARRAY_TASK_ID
+python BioClim_coupling.py $SLURM_ARRAY_TASK_ID
