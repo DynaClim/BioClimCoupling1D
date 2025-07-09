@@ -31,33 +31,6 @@ alphaCO    = 1e-3
 alphaN2    = 7e-4
 
 # Mars related constants calculated using a diagfi.nc file
-
-import xarray as xr 
-
-
-# HERE WE OPEN THE NETCDF FILE
-diagfi_path = ''
-data = xr.open_dataset(diagfi_path + 'diagfi_reference.nc', decode_times=False)
-starfi = xr.open_dataset(diagfi_path + 'startfi.nc', decode_times=False)
-
-Time = data['Time']
-lat = data['latitude']
-lon = data['longitude']
-aire = data['aire']
-rnat = data["rnat"]
-
-Mars_surface = float(np.sum(aire))  # Surface of Mars (m²)
-
-# Weighted rnat and global mean
-rnat_weighted = rnat * aire
-spatial_sum = rnat_weighted.sum(dim=["latitude", "longitude"])
-spatial_mean = spatial_sum / Mars_surface
-rnat_global_mean = spatial_mean.mean(dim="Time").item()
-fraction_ocean = float(1 - rnat_global_mean)
-
-# ASR (Absorbed Solar Radiation) global mean
-asr = data['ASR']
-asr_weighted = asr * aire
-spatial_sum = asr_weighted.sum(dim=["latitude", "longitude"])
-spatial_mean = spatial_sum / Mars_surface
-asr_global_mean = 2 * float(spatial_mean.mean(dim="Time").item())
+Mars_surface = 147300715581408.94 # Surface of Mars (m²)
+fraction_ocean = 0.2984851085697361
+asr_global_mean = 115.14534883197365 # ASR (in W/m²)
