@@ -11,7 +11,6 @@ from Functions import *
 from Photochem import *
 from alive_progress import alive_bar
 import time
-from FX import *
 from Interface_atmosphere_ocean import *
 from alive_progress import config_handler
 from functools import partial
