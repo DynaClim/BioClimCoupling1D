@@ -48,7 +48,7 @@ Contains physical functions to compute altitude from pressure and temperature, a
 
 ### 2.3. `Main_evolution_function_RK.py`
 
-Implements `system_evolution_RK` to evolve atmosphere and ocean composition under biological influence, using an adaptive time-step solver (LSODA). **NO CHANGE REQUIRED**.
+Implements `system_evolution_RK` to evolve atmosphere and ocean composition under biological influence, using an adaptive time-step solver (LSODA method). **NO CHANGE REQUIRED**.
 
 ### 2.4. `Photochem.py`
 
@@ -70,7 +70,7 @@ Returns interface fluxes using a stagnant boundary layer model (Karecha et al. 2
 
 ## 4. Coupling scripts
 
-These scripts perform multiple coupling simulations by varying three parameters: ocean volume ($V_{ocean}$), ratio ($r$), and number of climate‑model calls ($niter$). All outputs are $~200$ MB files.
+These scripts perform multiple coupling simulations by varying three parameters: ocean volume ($V_{ocean}$), ratio ($r$), and number of climate‑model calls ($niter$). All outputs are ~$200$ MB files.
 
 ### 4.1. `BioClim_coupling_niter.py`
 
@@ -106,4 +106,4 @@ Outputs `Lib_Couplage_exok_bio_file_r_{r}.pkl`. Launched via `Coupling_r.sbatch`
 2. Adjust paths in all scripts to match the server environment.  
 3. Use the appropriate `*.py` and `*.sbatch` scripts for your parameter study ($niter$, $V_{ocean}$, or $r$).  
 4. Submit jobs via `sbatch`.  
-5. Analyze the resulting `.pkl` files using the Jupyter notebooks in the [`Local_coupling_computation` section](../Local_coupling_computation).
+5. Analyze the resulting `.pkl` files using the Jupyter notebooks in the [`Local_coupling_computation`](../Local_coupling_computation) section.
